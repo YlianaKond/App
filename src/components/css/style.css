@@ -1,0 +1,165 @@
+/* Добавьте эти стили в конец файла style.css */
+
+.min-h-400 {
+    min-height: 400px;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Анимации для карточек статистики */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Адаптивность для слайдера */
+@media (max-width: 768px) {
+    .carousel-item .row {
+        flex-direction: column;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .min-h-400 {
+        min-height: auto;
+    }
+}
+
+/* Стили для текста в слайдере */
+.carousel-item h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.carousel-item .lead {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.carousel-item p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+/* Обновленные стили для кнопок на главной странице */
+.hero-buttons .btn {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Убираем эффекты скрытия для кнопок в герой-секции */
+.hero-section .btn {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+/* Специфичные стили для кнопки "Найти животное" */
+.btn-find-pet {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid white !important;
+    color: white !important;
+    backdrop-filter: blur(10px);
+}
+
+.btn-find-pet:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border-color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Анимация для кнопок */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Убираем любые эффекты скрытия */
+.d-none {
+    display: none !important;
+}
+.hero-section {
+    background: linear-gradient(135deg, #e0afe0 0%, #e4c5ee 100%);
+    color: white;
+    padding: 100px 0;
+}
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #e7c9e5;
+}
+.pet-card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+.min-h-400 {
+    min-height: 400px;
+}
+.btn-find-pet {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid white;
+    color: white;
+}
+.btn-find-pet:hover {
+    background-color: white;
+    color: #f0c0e5;
+    border-color: white;
+}
