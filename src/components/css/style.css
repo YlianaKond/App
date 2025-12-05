@@ -163,3 +163,577 @@
     color: #f0c0e5;
     border-color: white;
 }
+/* Добавьте в components/css/style.css */
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .step-indicator:before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #dee2e6;
+    z-index: 0;
+  }
+  
+  .step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #6c757d;
+    border: 3px solid white;
+  }
+  
+  .step.active .step-number {
+    background: #e0afe0;
+    color: white;
+    border-color: #e0afe0;
+  }
+  
+  .step small {
+    color: #6c757d;
+    font-size: 0.85rem;
+  }
+  
+  .step.active small {
+    color: #e0afe0;
+    font-weight: 500;
+  }
+  .min-h-400 {
+    min-height: 400px;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+/* Дополнительные стили для компонентов */
+
+/* Анимации */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Карточки животных */
+.pet-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e9ecef;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card .card-img-top {
+    transition: transform 0.3s;
+}
+
+.pet-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Значки статуса */
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Карточка статистики */
+.stats-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: none;
+}
+
+/* Иконки особенностей */
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7f1ff;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Карусель */
+.min-h-400 {
+    min-height: 400px;
+}
+
+.carousel-item .row {
+    min-height: 400px;
+}
+
+/* Формы */
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Алерты */
+.alert {
+    border-radius: 0.5rem;
+}
+
+/* Заголовки разделов */
+.section-title {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    border-radius: 3px;
+}
+
+/* Кнопки */
+.btn {
+    transition: all 0.2s;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Карточка с пунктирной границей */
+.border-dashed {
+    border: 2px dashed #dee2e6;
+    background-color: #f8f9fa;
+}
+
+.border-dashed:hover {
+    border-color: #007bff;
+    background-color: #e7f1ff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.75rem;
+    }
+    
+    .display-6 {
+        font-size: 1.5rem;
+    }
+    
+    .pet-card .card-img-top {
+        height: 180px;
+    }
+}
+
+/* Утилиты */
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.bg-primary-subtle {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+}
+
+.bg-success-subtle {
+    background-color: rgba(25, 135, 84, 0.1) !important;
+}
+
+.bg-info-subtle {
+    background-color: rgba(13, 202, 240, 0.1) !important;
+}
+
+.bg-warning-subtle {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+}
+/* Стили для страницы поиска */
+.pet-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.pet-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.pet-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 110, 253, 0.1);
+  border-radius: 50%;
+  color: #0d6efd;
+}
+
+/* Стили для страницы профиля */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-primary-subtle {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  border-color: rgba(13, 110, 253, 0.2) !important;
+}
+
+.bg-info-subtle {
+  background-color: rgba(13, 202, 240, 0.1) !important;
+  border-color: rgba(13, 202, 240, 0.2) !important;
+}
+
+.bg-success-subtle {
+  background-color: rgba(25, 135, 84, 0.1) !important;
+  border-color: rgba(25, 135, 84, 0.2) !important;
+}
+
+.bg-warning-subtle {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  border-color: rgba(255, 193, 7, 0.2) !important;
+}
+
+/* Анимации */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Стили для форм */
+.form-control:focus, .form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Стили для кнопок быстрого поиска */
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-outline-success:hover {
+  background-color: #198754;
+  color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .display-5 {
+    font-size: 1.75rem;
+  }
+  
+  .display-6 {
+    font-size: 1.5rem;
+  }
+  
+  .pet-card .card-img-top {
+    height: 200px;
+  }
+  
+  .d-flex.flex-wrap {
+    justify-content: center;
+  }
+}
+
+/* Утилиты */
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+/* Индикатор загрузки */
+.spinner-border {
+    vertical-align: middle;
+}
+
+/* Сообщения об ошибках */
+.invalid-feedback {
+    display: block;
+    font-size: 0.875rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Анимации для карточек статистики */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Адаптивность для слайдера */
+@media (max-width: 768px) {
+    .carousel-item .row {
+        flex-direction: column;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .min-h-400 {
+        min-height: auto;
+    }
+}
+
+/* Стили для текста в слайдере */
+.carousel-item h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.carousel-item .lead {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.carousel-item p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+/* Обновленные стили для кнопок на главной странице */
+.hero-buttons .btn {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Убираем эффекты скрытия для кнопок в герой-секции */
+.hero-section .btn {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+/* Специфичные стили для кнопки "Найти животное" */
+.btn-find-pet {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid white !important;
+    color: white !important;
+    backdrop-filter: blur(10px);
+}
+
+.btn-find-pet:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border-color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Анимация для кнопок */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Убираем любые эффекты скрытия */
+.d-none {
+    display: none !important;
+}
+.hero-section {
+    background: linear-gradient(135deg, #e0afe0 0%, #e4c5ee 100%);
+    color: white;
+    padding: 100px 0;
+}
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #e7c9e5;
+}
+.pet-card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+.min-h-400 {
+    min-height: 400px;
+}
+.btn-find-pet {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid white;
+    color: white;
+}
+.btn-find-pet:hover {
+    background-color: white;
+    color: #f0c0e5;
+    border-color: white;
+}
+/* src/components/css/style.css */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    border-radius: 3px;
+}
+
+.pet-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hover-shadow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+}
+
+.feature-icon {
+    margin-right: 10px;
+    color: #0d6efd;
+    width: 20px;
+    text-align: center;
+}
+
+.min-h-400 {
+    min-height: 400px;
+}
+
+/* Стили для иконок в карточках */
+.bg-primary-opacity-10 {
+    background-color: rgba(13, 110, 253, 0.1);
+}

@@ -1,5 +1,6 @@
 import img5 from "../components/image/foto5.jfif";
 import "../components/css/style.css";
+import { Link } from 'react-router-dom';
 function Componetn1() {
     return ( <div> 
     <div className="container">
@@ -17,12 +18,10 @@ function Componetn1() {
         <div className="search-suggestions" id="searchSuggestions" />
       </div>
       <div className="d-flex flex-wrap gap-3 mt-4">
-        <a className="btn btn-light btn-lg px-4" href="add-pet.html">
+      <Link className="btn btn-light btn-lg px-4" to="/add-pet"> 
           <i className="bi bi-plus-circle me-2" />Добавить объявление
-        </a>
-        <a className="btn btn-find-pet btn-lg px-4" href="search.html">
-          <i className="bi bi-search me-2" />Найти животное
-        </a>
+        </Link>
+        <Link className="btn btn-primary btn-lg" to="/search">Смотреть всех животных</Link>
       </div>
     </div>
     <div className="col-lg-6 text-center">
